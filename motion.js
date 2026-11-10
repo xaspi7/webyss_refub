@@ -90,6 +90,8 @@
   const clipEls = document.querySelectorAll("[data-clip]");
 
   function updateClips() {
+    // Když animaci převezme GSAP (gsap-motion.js), tahle záloha nic nedělá
+    if (root.classList.contains("gsap")) return;
     clipEls.forEach((el) => {
       if (reduceMotion.matches) {
         el.style.setProperty("--p", "1");
