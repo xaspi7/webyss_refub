@@ -87,6 +87,7 @@
   const navSections = $$("[data-nav]");
   function updateNav() {
     if (header) header.classList.toggle("scrolled", window.scrollY > 8);
+    if (!navSections.length) return;
     const y = window.scrollY + window.innerHeight * 0.35;
     let current = "";
     navSections.forEach((s) => {

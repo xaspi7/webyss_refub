@@ -7,13 +7,56 @@
 <meta name="description" content="Vizuální identita WEBYSS: logo, barvy, písmo a pravidla pro používání značky.">
 <link rel="icon" href="../favicon.ico" sizes="any">
 <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WEBYSS">
+<meta property="og:title" content="Značka WEBYSS | Koncept B">
+<meta property="og:description" content="Vizuální identita WEBYSS: logo, barvy, písmo a pravidla pro používání značky.">
+<meta property="og:url" content="https://webyss.cz/">
+<meta property="og:image" content="https://webyss.cz/logo-full.png">
+<meta property="og:locale" content="cs_CZ">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Značka WEBYSS | Koncept B">
+<meta name="twitter:description" content="Vizuální identita WEBYSS: logo, barvy, písmo a pravidla pro používání značky.">
+<meta name="twitter:image" content="https://webyss.cz/logo-full.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <meta name="robots" content="noindex">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap"></noscript>
-<link rel="stylesheet" href="style.css?v=2">
+<link rel="stylesheet" href="style.css?v=3">
 <script>document.documentElement.classList.add("js");</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://webyss.cz/#website",
+      "url": "https://webyss.cz/",
+      "name": "WEBYSS",
+      "publisher": {"@id": "https://webyss.cz/#business"},
+      "inLanguage": "cs"
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://webyss.cz/#business",
+      "name": "WEBYSS",
+      "url": "https://webyss.cz/",
+      "taxID": "24552241",
+      "email": "webyswebys@gmail.com",
+      "founder": {"@id": "https://webyss.cz/#person"},
+      "employee": {"@id": "https://webyss.cz/#person"}
+    },
+    {
+      "@type": "Person",
+      "@id": "https://webyss.cz/#person",
+      "name": "Adam \u0160anda",
+      "email": "webyswebys@gmail.com",
+      "worksFor": {"@id": "https://webyss.cz/#business"}
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -23,15 +66,15 @@
 
 <header class="site-header" id="top-bar">
   <div class="wrap header-inner">
-    <a class="logo" href="index.html#top" aria-label="WEBYSS, úvodní stránka"><span class="logo-mark" aria-hidden="true">W</span><span class="logo-word">WEBYSS</span></a>
+    <a class="logo" href="index.html" aria-label="WEBYSS, úvodní stránka"><span class="logo-mark" aria-hidden="true">W</span><span class="logo-word">WEBYSS</span></a>
     <nav class="main-nav" id="main-nav" aria-label="Hlavní navigace">
-      <a href="index.html#sluzby">Služby</a>
-      <a href="index.html#proces">Proces</a>
-      <a href="index.html#ukazka">Ukázka</a>
-      <a href="index.html#cenik">Ceník</a>
-      <a href="index.html#kontakt">Kontakt</a>
+      <a href="sluzby.html">Služby</a>
+      <a href="proces.html">Proces</a>
+      <a href="realizace.html">Realizace</a>
+      <a href="cenik.html">Ceník</a>
+      <a href="kontakt.html">Kontakt</a>
     </nav>
-    <a href="index.html#kontakt" class="btn btn-small header-cta">Poptat web</a>
+    <a href="kontakt.html" class="btn btn-small header-cta">Poptat web</a>
     <button class="nav-toggle" id="nav-toggle" aria-label="Otevřít menu" aria-expanded="false" aria-controls="main-nav">
       <span></span><span></span><span></span>
     </button>
@@ -101,17 +144,18 @@
       </div>
     </div>
   </section>
+
 </main>
 
 <footer class="footer on-dark">
   <div class="wrap footer-inner">
-    <a class="logo" href="index.html#top" aria-label="WEBYSS, úvodní stránka"><span class="logo-mark" aria-hidden="true">W</span><span class="logo-word">WEBYSS</span></a>
+    <a class="logo" href="index.html" aria-label="WEBYSS, úvodní stránka"><span class="logo-mark" aria-hidden="true">W</span><span class="logo-word">WEBYSS</span></a>
     <nav class="footer-nav" aria-label="Patička">
-      <a href="index.html#sluzby">Služby</a>
-      <a href="index.html#proces">Proces</a>
-      <a href="index.html#ukazka">Ukázka</a>
-      <a href="index.html#cenik">Ceník</a>
-      <a href="index.html#kontakt">Kontakt</a>
+      <a href="sluzby.html">Služby</a>
+      <a href="proces.html">Proces</a>
+      <a href="realizace.html">Realizace</a>
+      <a href="cenik.html">Ceník</a>
+      <a href="kontakt.html">Kontakt</a>
       <a href="brand.html">Značka</a>
     </nav>
     <p class="footer-meta">
@@ -222,7 +266,7 @@
   </div>
 </div>
 
-<script src="script.js?v=1"></script>
-<script src="motion.js?v=1"></script>
+<script src="script.js?v=3"></script>
+<script src="motion.js?v=3"></script>
 </body>
 </html>
