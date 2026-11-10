@@ -21,9 +21,10 @@
 <meta name="twitter:image" content="https://webyss.cz/logo-full.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"></noscript>
-<link rel="stylesheet" href="styles.css">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap"></noscript>
+<link rel="stylesheet" href="styles-v2.css">
+<script>document.documentElement.classList.add("js");</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -52,22 +53,22 @@
 }
 </script>
 </head>
-<body class="services-page">
+<body>
 
 <header class="site-header" id="top">
-  <div class="container header-inner">
-    <a href="/" class="logo" aria-label="WEBYSS">
-      <img class="logo-image logo-image-compact" src="logo-full-compact.png" alt="WEBYSS" width="240" height="64" decoding="async">
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo" aria-label="WEBYSS, úvodní stránka">
+      <img src="logo-full-compact.png" alt="WEBYSS" width="240" height="64" decoding="async">
     </a>
-    <nav class="main-nav" id="main-nav">
-      <a href="sluzby.html">Služby</a>
+    <nav class="main-nav" id="main-nav" aria-label="Hlavní navigace">
+      <a href="sluzby.html" aria-current="page">Služby</a>
       <a href="proces.html">Proces</a>
-      <a href="/#ukazka">Ukázka práce</a>
+      <a href="index.html#ukazka">Ukázka práce</a>
       <a href="cenik.html">Ceník</a>
-      <a href="/#kontakt">Kontakt</a>
+      <a href="index.html#kontakt">Kontakt</a>
     </nav>
-    <a href="/#kontakt" class="btn btn-primary btn-small header-cta">Poptat web</a>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Otevřít menu" aria-expanded="false">
+    <a href="index.html#kontakt" class="btn btn-small header-cta">Poptat web</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Otevřít menu" aria-expanded="false" aria-controls="main-nav">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -75,86 +76,69 @@
 
 <main>
 
-  <!-- ÚVOD STRÁNKY -->
-  <section class="page-header">
-    <div class="container">
-      <a href="/" class="back-link">← Zpět na hlavní stránku</a>
-      <p class="eyebrow">Služby</p>
-      <h1>Tvorba webových stránek pro živnostníky a malé firmy</h1>
-      <p class="hero-lead">
-        Nejde o to mít web za každou cenu. Jde o to, aby lidem bylo hned jasné,
-        co děláte a proč se vám ozvat.
-      </p>
+  <section class="page-hero">
+    <div class="wrap">
+      <h1>
+        <span class="line"><span>Tvorba webů pro</span></span>
+        <span class="line"><span>živnostníky a</span></span>
+        <span class="line"><span>malé firmy.</span></span>
+      </h1>
+      <div class="hero-foot">
+        <p class="hero-lead">Od ujasnění nabídky po spuštění online. Postarám se o všechno, co web potřebuje, aby začal přinášet poptávky.</p>
+        <div class="hero-actions">
+          <a href="index.html#kontakt" class="btn">Poptat web</a>
+          <a href="cenik.html" class="text-link">Podívat se na ceník</a>
+        </div>
+      </div>
+      <div class="hero-rule" aria-hidden="true"></div>
     </div>
   </section>
 
-  <!-- SEZNAM SLUŽEB -->
   <section class="section">
-    <div class="container">
-      <p class="section-tag center">Přehled</p>
-      <h2 class="center">Co je součástí spolupráce</h2>
-      <div class="service-list">
-        <div class="service-row">
-          <span class="service-num">01</span>
-          <div class="service-body">
-            <h3>Jasná nabídka</h3>
-            <p>Než začneme stavět, ujasníme si, co má web vlastně říct. Bez toho se mine účinkem i ten hezčí design.</p>
-          </div>
+    <div class="wrap">
+      <div class="section-head"><h2>Co je součástí spolupráce</h2></div>
+      <div class="rows" data-line>
+        <div class="row" data-line>
+          <h3>Jasná nabídka</h3>
+          <p>Než začneme stavět, ujasníme si, co má web vlastně říct. Bez toho se mine účinkem i ten hezčí design.</p>
         </div>
-        <div class="service-row">
-          <span class="service-num">02</span>
-          <div class="service-body">
-            <h3>Rychlý web</h3>
-            <p>Žádný zbytečně těžký systém na pozadí. Stránka se načte dřív, než to člověk stihne domyslet.</p>
-          </div>
+        <div class="row" data-line>
+          <h3>Rychlý web</h3>
+          <p>Žádný zbytečně těžký systém na pozadí. Stránka se načte dřív, než to člověk stihne domyslet.</p>
         </div>
-        <div class="service-row">
-          <span class="service-num">03</span>
-          <div class="service-body">
-            <h3>Mobilní použitelnost</h3>
-            <p>Většina návštěvníků otevře web na telefonu. Musí tam vypadat a fungovat stejně dobře jako na počítači.</p>
-          </div>
+        <div class="row" data-line>
+          <h3>Mobilní použitelnost</h3>
+          <p>Většina návštěvníků otevře web na telefonu. Musí tam vypadat a fungovat stejně dobře jako na počítači.</p>
         </div>
-        <div class="service-row">
-          <span class="service-num">04</span>
-          <div class="service-body">
-            <h3>Struktura webu</h3>
-            <p>Ne všechno patří na úvodní stránku. Pomůžu rozhodnout, co tam má být a co si zaslouží vlastní prostor.</p>
-          </div>
+        <div class="row" data-line>
+          <h3>Struktura webu</h3>
+          <p>Ne všechno patří na úvodní stránku. Pomůžu rozhodnout, co tam má být a co si zaslouží vlastní prostor.</p>
         </div>
-        <div class="service-row">
-          <span class="service-num">05</span>
-          <div class="service-body">
-            <h3>Nasazení online</h3>
-            <p>Doména, hosting, ostrý provoz. O tohle se postarám, ať web co nejdřív začne fungovat pro zákazníky.</p>
-          </div>
+        <div class="row" data-line>
+          <h3>Nasazení online</h3>
+          <p>Doména, hosting, ostrý provoz. O tohle se postarám, ať web co nejdřív začne fungovat pro zákazníky.</p>
         </div>
-        <div class="service-row">
-          <span class="service-num">06</span>
-          <div class="service-body">
-            <h3>Drobné úpravy</h3>
-            <p>Web nekončí spuštěním. Když bude potřeba něco doplnit nebo přepsat, stačí napsat.</p>
-          </div>
+        <div class="row" data-line>
+          <h3>Drobné úpravy</h3>
+          <p>Web nekončí spuštěním. Když bude potřeba něco doplnit nebo přepsat, stačí napsat.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PRO KOHO -->
-  <section class="section section-alt" id="pro-koho">
-    <div class="container">
-      <p class="section-tag center">Pro koho</p>
-      <h2 class="center">Komu tenhle typ webu sedí nejvíc</h2>
-      <div class="audience-bar">
-        <div class="audience-item">
+  <section class="section" id="pro-koho">
+    <div class="wrap">
+      <div class="section-head"><h2>Komu tenhle typ webu sedí nejvíc</h2></div>
+      <div class="cols-3">
+        <div class="col" data-line>
           <h3>Řemeslníci</h3>
           <p>Elektrikáři, instalatéři, truhláři, podlaháři, zámečníci a podobné profese.</p>
         </div>
-        <div class="audience-item">
+        <div class="col" data-line>
           <h3>Služby</h3>
-          <p>Účetní, poradci, freelanceři, marketéři nebo lidi podnikající lokálně.</p>
+          <p>Účetní, poradci, freelanceři, marketéři nebo lidé podnikající lokálně.</p>
         </div>
-        <div class="audience-item">
+        <div class="col" data-line>
           <h3>Menší firmy</h3>
           <p>Kavárny, salony, studia, provozovny, půjčovny a další menší podniky.</p>
         </div>
@@ -162,31 +146,31 @@
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="section">
-    <div class="container center">
+  <section class="cta-band">
+    <div class="wrap cta-grid">
       <h2>Máte podobný záměr?</h2>
-      <p class="section-lead center">Napište mi pár vět o tom, co potřebujete, a ozvu se s návrhem řešení.</p>
-      <a href="/#kontakt" class="btn btn-primary">Nezávazně poptat web</a>
+      <div class="cta-side">
+        <p>Napište mi pár vět o tom, co potřebujete, a ozvu se s návrhem řešení.</p>
+        <a href="index.html#kontakt" class="btn btn-light">Nezávazně poptat web</a>
+      </div>
     </div>
   </section>
-
 </main>
 
 <footer class="site-footer">
-  <div class="container footer-inner">
-    <a href="/" class="logo" aria-label="WEBYSS">
-      <img class="logo-image logo-image-full" src="logo-full.png" alt="WEBYSS" width="480" height="128" decoding="async">
+  <div class="wrap footer-inner">
+    <a href="index.html" class="logo" aria-label="WEBYSS, úvodní stránka">
+      <img src="logo-full-compact.png" alt="WEBYSS" width="240" height="64" decoding="async">
     </a>
-    <nav class="footer-nav">
+    <nav class="footer-nav" aria-label="Patička">
       <a href="sluzby.html">Služby</a>
       <a href="proces.html">Proces</a>
-      <a href="/#ukazka">Ukázka práce</a>
+      <a href="index.html#ukazka">Ukázka práce</a>
       <a href="cenik.html">Ceník</a>
-      <a href="/#kontakt">Kontakt</a>
+      <a href="index.html#kontakt">Kontakt</a>
     </nav>
     <p class="footer-meta">
-      © 2026 WEBYSS — Adam Šanda · IČO: 24552241
+      © 2026 WEBYSS, Adam Šanda, IČO: 24552241
       · <button type="button" class="footer-link-btn" id="open-cookie-settings">Nastavení cookies</button>
     </p>
   </div>
@@ -294,5 +278,6 @@
 </div>
 
 <script src="script.js"></script>
+<script src="motion.js"></script>
 </body>
 </html>

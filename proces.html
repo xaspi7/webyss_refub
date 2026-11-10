@@ -21,9 +21,10 @@
 <meta name="twitter:image" content="https://webyss.cz/logo-full.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"></noscript>
-<link rel="stylesheet" href="styles.css">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap"></noscript>
+<link rel="stylesheet" href="styles-v2.css">
+<script>document.documentElement.classList.add("js");</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -39,22 +40,22 @@
 }
 </script>
 </head>
-<body class="process-page">
+<body>
 
 <header class="site-header" id="top">
-  <div class="container header-inner">
-    <a href="/" class="logo" aria-label="WEBYSS">
-      <img class="logo-image logo-image-compact" src="logo-full-compact.png" alt="WEBYSS" width="240" height="64" decoding="async">
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo" aria-label="WEBYSS, úvodní stránka">
+      <img src="logo-full-compact.png" alt="WEBYSS" width="240" height="64" decoding="async">
     </a>
-    <nav class="main-nav" id="main-nav">
+    <nav class="main-nav" id="main-nav" aria-label="Hlavní navigace">
       <a href="sluzby.html">Služby</a>
-      <a href="proces.html">Proces</a>
-      <a href="/#ukazka">Ukázka práce</a>
+      <a href="proces.html" aria-current="page">Proces</a>
+      <a href="index.html#ukazka">Ukázka práce</a>
       <a href="cenik.html">Ceník</a>
-      <a href="/#kontakt">Kontakt</a>
+      <a href="index.html#kontakt">Kontakt</a>
     </nav>
-    <a href="/#kontakt" class="btn btn-primary btn-small header-cta">Poptat web</a>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Otevřít menu" aria-expanded="false">
+    <a href="index.html#kontakt" class="btn btn-small header-cta">Poptat web</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Otevřít menu" aria-expanded="false" aria-controls="main-nav">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -62,82 +63,86 @@
 
 <main>
 
-  <!-- ÚVOD STRÁNKY -->
-  <section class="page-header">
-    <div class="container">
-      <a href="/" class="back-link">← Zpět na hlavní stránku</a>
-      <p class="eyebrow">Proces</p>
-      <h1>Jak probíhá tvorba webových stránek</h1>
-      <p class="hero-lead">
-        Žádný z kroků není pevně daný. Pokud něco už máte hotové, klidně ho
-        přeskočíme.
-      </p>
+  <section class="page-hero">
+    <div class="wrap">
+      <h1>
+        <span class="line"><span>Jak vzniká</span></span>
+        <span class="line"><span>váš web.</span></span>
+      </h1>
+      <div class="hero-foot">
+        <p class="hero-lead">Žádný z kroků není pevně daný. Pokud už máte něco hotové, klidně ho přeskočíme.</p>
+        <div class="hero-actions">
+          <a href="index.html#kontakt" class="btn">Poptat web</a>
+        </div>
+      </div>
+      <div class="hero-rule" aria-hidden="true"></div>
     </div>
   </section>
 
-  <!-- ČASOVÁ OSA -->
   <section class="section">
-    <div class="container">
-      <p class="section-tag center">Jak to funguje</p>
-      <h2 class="center">Čtyři kroky k hotovému webu</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-marker">1</div>
-          <div class="timeline-body">
+    <div class="wrap steps">
+      <div class="steps-intro">
+        <h2>Čtyři kroky k hotovému webu</h2>
+        <p>Od první zprávy po spuštění. Stačí, když začnete jedním dvěma větami.</p>
+      </div>
+      <ol class="steps-list" style="list-style:none;margin:0;padding:0">
+        <div class="step">
+          <span class="step-num" aria-hidden="true">1</span>
+          <div class="step-body">
             <h3>Krátká domluva</h3>
             <p>Napíšete mi, co potřebujete, a společně ujasníme rozsah, styl a cíl webu.</p>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-marker">2</div>
-          <div class="timeline-body">
+        <div class="step">
+          <span class="step-num" aria-hidden="true">2</span>
+          <div class="step-body">
             <h3>Podklady</h3>
             <p>Pošlete texty, kontakty, fotky, nebo jen pár základních informací, ze kterých vyjdeme.</p>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-marker">3</div>
-          <div class="timeline-body">
+        <div class="step">
+          <span class="step-num" aria-hidden="true">3</span>
+          <div class="step-body">
             <h3>Návrh a zpracování</h3>
             <p>Připravím podobu webu a doladíme detaily podle vašich připomínek.</p>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-marker">4</div>
-          <div class="timeline-body">
+        <div class="step">
+          <span class="step-num" aria-hidden="true">4</span>
+          <div class="step-body">
             <h3>Spuštění</h3>
             <p>Web nasadíme online, otestujeme, že vše funguje, a může sloužit zákazníkům.</p>
           </div>
         </div>
+      </ol>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap cta-grid">
+      <h2>Chcete začít?</h2>
+      <div class="cta-side">
+        <p>Stačí pár vět o tom, co děláte a jaký web byste chtěli.</p>
+        <a href="index.html#kontakt" class="btn btn-light">Nezávazně poptat web</a>
       </div>
     </div>
   </section>
-
-  <!-- CTA -->
-  <section class="section section-alt">
-    <div class="container center">
-      <h2>Chcete začít?</h2>
-      <p class="section-lead center">Stačí pár vět o tom, co děláte a jaký web byste chtěli.</p>
-      <a href="/#kontakt" class="btn btn-primary">Nezávazně poptat web</a>
-    </div>
-  </section>
-
 </main>
 
 <footer class="site-footer">
-  <div class="container footer-inner">
-    <a href="/" class="logo" aria-label="WEBYSS">
-      <img class="logo-image logo-image-full" src="logo-full.png" alt="WEBYSS" width="480" height="128" decoding="async">
+  <div class="wrap footer-inner">
+    <a href="index.html" class="logo" aria-label="WEBYSS, úvodní stránka">
+      <img src="logo-full-compact.png" alt="WEBYSS" width="240" height="64" decoding="async">
     </a>
-    <nav class="footer-nav">
+    <nav class="footer-nav" aria-label="Patička">
       <a href="sluzby.html">Služby</a>
       <a href="proces.html">Proces</a>
-      <a href="/#ukazka">Ukázka práce</a>
+      <a href="index.html#ukazka">Ukázka práce</a>
       <a href="cenik.html">Ceník</a>
-      <a href="/#kontakt">Kontakt</a>
+      <a href="index.html#kontakt">Kontakt</a>
     </nav>
     <p class="footer-meta">
-      © 2026 WEBYSS — Adam Šanda · IČO: 24552241
+      © 2026 WEBYSS, Adam Šanda, IČO: 24552241
       · <button type="button" class="footer-link-btn" id="open-cookie-settings">Nastavení cookies</button>
     </p>
   </div>
@@ -245,5 +250,6 @@
 </div>
 
 <script src="script.js"></script>
+<script src="motion.js"></script>
 </body>
 </html>
