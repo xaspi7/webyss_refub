@@ -492,9 +492,6 @@ p { margin: 0; max-width: 56ch; text-wrap: pretty; }
   transform-origin: 50% 100%;
   transform: translateY(calc((1 - var(--p)) * 4cqw)) scale(calc(0.93 + var(--p) * 0.07));
 }
-.mock-bar { display: flex; align-items: center; gap: 0.7cqw; height: 3.6cqw; padding: 0 1.4cqw; background: var(--paper); border-bottom: 1px solid var(--mist); }
-.mock-bar i { width: 0.9cqw; height: 0.9cqw; border-radius: 50%; background: var(--mist); }
-.mock-bar span { margin-left: 1cqw; font-size: 1.15cqw; color: var(--muted); }
 
 .mock-site { font-family: var(--font-body); background: #1c1816; color: #fff; }
 .ms-nav {

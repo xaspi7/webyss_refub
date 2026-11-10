@@ -390,7 +390,7 @@ h3 { font-size: clamp(1.8rem, 3.4vw, 3.4rem); }
 .case .text-link { justify-self: start; color: var(--metr); background-image: linear-gradient(var(--metr), var(--metr)); background-size: 100% 0.12em; }
 .case .text-link:hover { background-size: 100% 100%; color: var(--tuzka); }
 
-/* Náhled hotového webu (okno prohlížeče + telefon), z HTML a CSS. Velikosti v cqw. */
+/* Náhled hotového webu (stránka + telefon), z HTML a CSS. Velikosti v cqw. */
 .mock { position: relative; display: block; container-type: inline-size; aspect-ratio: 16 / 11.4; }
 .mock-desktop {
   position: absolute; left: 0; top: 0; width: 90%;
@@ -399,9 +399,6 @@ h3 { font-size: clamp(1.8rem, 3.4vw, 3.4rem); }
   transform-origin: 50% 100%;
   transform: translateY(calc((1 - var(--p)) * 4cqw)) scale(calc(0.93 + var(--p) * 0.07));
 }
-.mock-bar { display: flex; align-items: center; gap: 0.7cqw; height: 3.6cqw; padding: 0 1.4cqw; background: #f1f1ee; border-bottom: 1px solid #ddd; }
-.mock-bar i { width: 0.9cqw; height: 0.9cqw; border-radius: 50%; background: #cfcfca; }
-.mock-bar span { margin-left: 1cqw; font-size: 1.15cqw; color: #66665f; }
 .mock-site { background: #1c1816; color: #fff; }
 .ms-nav { display: flex; align-items: center; gap: 2.4cqw; height: 5.6cqw; padding: 0 4cqw; background: #efeeec; color: #2a2522; font-size: 1.05cqw; letter-spacing: 0.08em; text-transform: uppercase; }
 .ms-nav b { margin-right: auto; font-family: Georgia, "Times New Roman", serif; font-size: 1.7cqw; letter-spacing: 0.22em; font-weight: 700; }
