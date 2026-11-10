@@ -468,27 +468,81 @@ p { margin: 0; max-width: 56ch; text-wrap: pretty; }
 .case { padding: clamp(24px, 4vh, 48px) 0 clamp(72px, 12vh, 150px); }
 .case-grid { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: 24px; row-gap: 40px; align-items: center; }
 .case-media { grid-column: 1 / span 7; --p: 1; }
-.case-photo {
+/* Náhled hotového webu: okno prohlížeče + telefon, vše z HTML a CSS (bez iframe).
+   Velikosti jsou v cqw, takže se celý náhled škáluje podle šířky kontejneru. */
+.mock {
+  position: relative;
   display: block;
-  aspect-ratio: 5 / 4;
+  container-type: inline-size;
+  aspect-ratio: 16 / 11.4;
+}
+.mock-desktop {
+  position: absolute;
+  left: 0; top: 0;
+  width: 90%;
+  background: #fff;
+  border: 1px solid var(--mist);
+  border-radius: 1.2cqw;
   overflow: hidden;
-  background: var(--mist);
-  clip-path: inset(
-    calc((1 - var(--p)) * 16%)
-    calc((1 - var(--p)) * 16%)
-    calc((1 - var(--p)) * 16%)
-    calc((1 - var(--p)) * 16%)
-    round 10px
-  );
+  transform-origin: 50% 100%;
+  transform: translateY(calc((1 - var(--p)) * 4cqw)) scale(calc(0.93 + var(--p) * 0.07));
 }
-.case-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 62%;
-  transform: scale(calc(1.2 - var(--p) * 0.2));
-  will-change: transform;
+.mock-bar { display: flex; align-items: center; gap: 0.7cqw; height: 3.6cqw; padding: 0 1.4cqw; background: var(--paper); border-bottom: 1px solid var(--mist); }
+.mock-bar i { width: 0.9cqw; height: 0.9cqw; border-radius: 50%; background: var(--mist); }
+.mock-bar span { margin-left: 1cqw; font-size: 1.15cqw; color: var(--muted); }
+
+.mock-site { font-family: var(--font-body); background: #1c1816; color: #fff; }
+.ms-nav {
+  display: flex;
+  align-items: center;
+  gap: 2.4cqw;
+  height: 5.6cqw;
+  padding: 0 4cqw;
+  background: #efeeec;
+  color: #2a2522;
+  font-size: 1.05cqw;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
+.ms-nav b { margin-right: auto; font-family: Georgia, "Times New Roman", serif; font-size: 1.7cqw; letter-spacing: 0.22em; font-weight: 700; }
+.ms-nav em { font-style: normal; padding: 0.8cqw 1.5cqw; background: #b7580f; color: #fff; font-weight: 600; }
+.ms-hero { display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: 3cqw; min-height: 30cqw; padding: 3cqw 4cqw 3.4cqw; }
+.ms-copy h3 {
+  margin: 0 0 1.6cqw;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  font-size: 5.4cqw;
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+}
+.ms-copy p { max-width: 32ch; margin: 0 0 2cqw; padding-left: 1.4cqw; border-left: 2px solid #fff; font-size: 1.4cqw; line-height: 1.5; }
+.ms-btns { display: flex; gap: 1cqw; font-size: 1.25cqw; font-weight: 600; }
+.ms-btns em, .ms-btns span { font-style: normal; padding: 1.1cqw 1.8cqw; }
+.ms-btns em { background: #b7580f; }
+.ms-btns span { background: #35302d; border: 1px solid #4a4440; }
+.ms-photo { width: 100%; height: 100%; max-height: 25cqw; object-fit: cover; background: #2a2522; }
+
+.mock-phone {
+  position: absolute;
+  right: 0; bottom: 0;
+  width: 24cqw;
+  aspect-ratio: 9 / 18.5;
+  padding: 0.7cqw;
+  background: #14121f;
+  border-radius: 3.6cqw;
+  opacity: var(--p);
+  transform: translateY(calc((1 - var(--p)) * 10cqw));
+  box-shadow: 0 3cqw 5cqw -3cqw rgba(20, 18, 31, 0.45);
+}
+.mp-screen { position: relative; width: 100%; height: 100%; border-radius: 3cqw; overflow: hidden; background: #1c1816; color: #fff; font-family: var(--font-body); }
+.mp-screen img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.mp-screen::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20, 16, 14, 0.5) 0%, rgba(20, 16, 14, 0.15) 35%, rgba(20, 16, 14, 0.88) 100%); }
+.mp-nav { position: absolute; z-index: 1; left: 0; right: 0; top: 0; display: flex; justify-content: space-between; align-items: center; padding: 2cqw 2cqw 0; font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 1.35cqw; letter-spacing: 0.2em; }
+.mp-copy { position: absolute; z-index: 1; left: 2cqw; right: 2cqw; bottom: 2.4cqw; }
+.mp-copy h3 { margin: 0 0 1cqw; font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 2.7cqw; line-height: 1.05; letter-spacing: 0; }
+.mp-copy p { margin: 0 0 1.6cqw; font-size: 1.15cqw; line-height: 1.45; }
+.mp-copy em { display: inline-block; font-style: normal; font-size: 1.15cqw; font-weight: 600; padding: 1cqw 1.8cqw; background: #b7580f; }
+
 .case-text { grid-column: 9 / span 4; display: grid; gap: 22px; align-content: center; }
 .case-text h2 { font-size: clamp(2rem, 3.6vw, 3.25rem); }
 .case-text p { color: var(--muted); }
